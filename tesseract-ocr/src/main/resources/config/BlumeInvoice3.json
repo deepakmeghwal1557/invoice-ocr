@@ -1,0 +1,251 @@
+{
+  "invoiceName":"BlumeInvoice",
+  "predictions": [
+    {
+      "x": 1400,
+      "y": 100,
+      "width": 950,
+      "height": 200,
+      "labelName": "Invoice Number",
+      "labelCode":"invoiceNumber",
+      "filterCriteriaList":[
+        {
+          "methodName": "substringAfter",
+          "argsList": ["Invoice#"]
+        },
+        {
+          "methodName": "replaceAll",
+          "argsList": [" |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 800,
+      "y": 500,
+      "width": 300,
+      "height": 500,
+      "labelName": "Date Sent",
+      "labelCode":"dateSent",
+      "filterCriteriaList":[
+        {
+          "methodName": "substringAfter",
+          "argsList": ["Date Sent"]
+        },
+        {
+          "methodName": "replaceAll",
+          "argsList": [" |\n", ""]
+        },
+        {
+          "methodName": "trim",
+          "argsList": []
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 0,
+      "y": 500,
+      "width": 500,
+      "height": 500,
+      "labelName": "Bill To Party",
+      "labelCode":"billToParty",
+      "filterCriteriaList":[
+        {
+          "methodName": "substringBetween",
+          "argsList": ["Bill To", "Dept"]
+        },
+        {
+          "methodName": "replaceAll",
+          "argsList": ["\n", ""]
+        },
+        {
+          "methodName": "trim",
+          "argsList": []
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 500,
+      "y": 500,
+      "width": 300,
+      "height": 500,
+      "labelName": "remit To Party",
+      "labelCode":"remitToParty",
+      "filterCriteriaList":[
+        {
+          "methodName": "substringBetween",
+          "argsList": ["Remit To", "Dept"]
+        },
+        {
+          "methodName": "replaceAll",
+          "argsList": ["\n", ""]
+        },
+        {
+          "methodName": "trim",
+          "argsList": []
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1100,
+      "y": 500,
+      "width": 300,
+      "height": 200,
+      "labelName": "Mode",
+      "labelCode":"mode",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Mode| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1500,
+      "y": 500,
+      "width": 300,
+      "height": 200,
+      "labelName": "Invoice Type",
+      "labelCode":"invoiceType",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Invoice Type| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 0,
+      "y": 1000,
+      "width": 2000,
+      "height": 100,
+      "labelName": "Shipment Number",
+      "labelCode":"shipmentNumber",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Shipment#| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1700,
+      "y": 1200,
+      "width": 800,
+      "height": 1000,
+      "labelName": "Total Amount",
+      "labelCode":"totalAmount",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["\n", " "]
+        },
+        {
+          "methodName": "substringAfter",
+          "argsList": ["Total"]
+        },
+        {
+          "methodName": "trim",
+          "argsList": []
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    }
+  ],
+  "tablePredictions": [
+    {
+      "x": 0,
+      "y": 1100,
+      "width": 500,
+      "height": 500,
+      "labelName": "Equipment Number",
+      "labelCode":"equipmentNumber",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Equipment#| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 500,
+      "y": 1100,
+      "width": 500,
+      "height": 300,
+      "labelName": "Charge Code",
+      "labelCode":"chargeCode",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Charge Code| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1000,
+      "y": 1100,
+      "width": 300,
+      "height": 400,
+      "labelName": "Charge Name",
+      "labelCode":"chargeName",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Charge Name| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1700,
+      "y": 1100,
+      "width": 300,
+      "height": 300,
+      "labelName": "Charge Amount",
+      "labelCode":"billingAmount",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Total Charge| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 2100,
+      "y": 1100,
+      "width": 400,
+      "height": 300,
+      "labelName": "Comments",
+      "labelCode":"description",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Comments|\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    }
+  ]
+}

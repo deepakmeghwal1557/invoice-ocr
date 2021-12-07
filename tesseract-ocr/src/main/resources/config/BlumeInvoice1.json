@@ -1,0 +1,69 @@
+{
+  "invoiceName":"BlumeInvoice",
+  "predictions": [
+    {
+      "x": 0,
+      "y": 1100,
+      "width": 500,
+      "height": 200,
+      "labelName": "Equipment Number",
+      "labelCode":"equipmentNumber",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Equipment#| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 500,
+      "y": 1100,
+      "width": 500,
+      "height": 200,
+      "labelName": "Charge Code",
+      "labelCode":"chargeCode",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Charge Code| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1000,
+      "y": 1100,
+      "width": 300,
+      "height": 200,
+      "labelName": "Charge Name",
+      "labelCode":"chargeName",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Charge Name| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    },
+    {
+      "x": 1700,
+      "y": 1100,
+      "width": 300,
+      "height": 200,
+      "labelName": "Charge Amount",
+      "labelCode":"billingAmount",
+      "filterCriteriaList":[
+        {
+          "methodName": "replaceAll",
+          "argsList": ["Total Charge| |\n", ""]
+        }
+      ],
+      "isActive": true,
+      "ocrText": ""
+    }
+  ]
+}
